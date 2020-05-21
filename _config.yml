@@ -3,11 +3,11 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 我的博客
-subtitle: ''
+title: '我的博客'
+subtitle: '哈哈'
 description: '记录码农生活的点点滴滴'
 keywords:
-author: 蒋楷Jaxon
+author: '蒋楷Jaxon'
 language: cn
 timezone: ''
 
