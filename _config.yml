@@ -6,14 +6,14 @@
 title: '我的博客'
 subtitle: 
 description: '记录码农生活的点点滴滴'
-keywords:
+keywords: 
 author: '蒋楷Jaxon'
 language: zh-CN
 timezone: ''
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: https://jk199548.github.io/
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
