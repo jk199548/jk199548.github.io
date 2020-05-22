@@ -17,21 +17,21 @@
   <meta http-equiv="window-target" content="_top" />
   
   
-  <title>js笔记 | 我的博客</title>
-  <meta name="description" content="关于call apply bind的一些认识1234567891011121314151617181920212223242526272829303132在JavaScript中，call、apply和bind是Function对象自带的三个方法，这三个方法的主要作用是改变函数中的this指向。不传，或者传null,undefined， 函数中的this指向window对象传递另一个函数的函数名，">
+  <title>markdown | 我的博客</title>
+  <meta name="description" content="markdown的一些简单的语法 添加表格： Markdown 制作表格使用 | 来分隔不同的单元格，使用 - 来分隔表头和其他行。 -: 设置内容和标题栏居右对齐。:- 设置内容和标题栏居左对齐。:-: 设置内容和标题栏居中对齐。语法格式如下:    1234| 左对齐 | 右对齐 | 居中对齐 || :-----| ----: | :----: || 单元格 | 单元格 | 单元格 || 单元">
 <meta property="og:type" content="article">
-<meta property="og:title" content="js笔记">
-<meta property="og:url" content="https://jk199548.github.io/2020/05/21/aboutjs/index.html">
+<meta property="og:title" content="markdown">
+<meta property="og:url" content="https://jk199548.github.io/2020/05/22/markdown/index.html">
 <meta property="og:site_name" content="我的博客">
-<meta property="og:description" content="关于call apply bind的一些认识1234567891011121314151617181920212223242526272829303132在JavaScript中，call、apply和bind是Function对象自带的三个方法，这三个方法的主要作用是改变函数中的this指向。不传，或者传null,undefined， 函数中的this指向window对象传递另一个函数的函数名，">
+<meta property="og:description" content="markdown的一些简单的语法 添加表格： Markdown 制作表格使用 | 来分隔不同的单元格，使用 - 来分隔表头和其他行。 -: 设置内容和标题栏居右对齐。:- 设置内容和标题栏居左对齐。:-: 设置内容和标题栏居中对齐。语法格式如下:    1234| 左对齐 | 右对齐 | 居中对齐 || :-----| ----: | :----: || 单元格 | 单元格 | 单元格 || 单元">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-05-21T06:45:28.000Z">
-<meta property="article:modified_time" content="2020-05-22T01:32:12.458Z">
+<meta property="article:published_time" content="2020-05-22T05:14:53.000Z">
+<meta property="article:modified_time" content="2020-05-22T06:04:46.869Z">
 <meta property="article:author" content="蒋楷Jaxon">
-<meta property="article:tag" content="JavaScript">
+<meta property="article:tag" content="markdowm">
 <meta name="twitter:card" content="summary">
   <!-- Canonical links -->
-  <link rel="canonical" href="https://jk199548.github.io/2020/05/21/aboutjs/index.html">
+  <link rel="canonical" href="https://jk199548.github.io/2020/05/22/markdown/index.html">
   
     <link rel="alternate" href="/atom.xml" title="我的博客" type="application/atom+xml">
   
@@ -275,14 +275,14 @@
   
 <main class="main" role="main">
   <div class="content">
-  <article id="post-aboutjs" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+  <article id="post-markdown" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
     
     <div class="article-header">
       
         
   
     <h1 class="article-title" itemprop="name">
-      js笔记
+      markdown
     </h1>
   
 
@@ -290,27 +290,74 @@
       <div class="article-meta">
         <span class="article-date">
     <i class="icon icon-calendar-check"></i>
-	<a href="/2020/05/21/aboutjs/" class="article-date">
-	  <time datetime="2020-05-21T06:45:28.000Z" itemprop="datePublished">2020-05-21</time>
+	<a href="/2020/05/22/markdown/" class="article-date">
+	  <time datetime="2020-05-22T05:14:53.000Z" itemprop="datePublished">2020-05-22</time>
 	</a>
 </span>
         
         
   <span class="article-tag">
     <i class="icon icon-tags"></i>
-	<a class="article-tag-link" href="/tags/JavaScript/" rel="tag">JavaScript</a>
+	<a class="article-tag-link" href="/tags/markdowm/" rel="tag">markdowm</a>
   </span>
 
 
         
 
-        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2020/05/21/aboutjs/#comments" class="article-comment-link">评论</a></span>
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2020/05/22/markdown/#comments" class="article-comment-link">评论</a></span>
         
       </div>
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        <h2 id="关于call-apply-bind的一些认识"><a href="#关于call-apply-bind的一些认识" class="headerlink" title="关于call apply bind的一些认识"></a>关于call apply bind的一些认识</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">在JavaScript中，call、apply和bind是Function对象自带的三个方法，这三个方法的主要作用是改变函数中的this指向。</span><br><span class="line"></span><br><span class="line">不传，或者传null,undefined， 函数中的this指向window对象</span><br><span class="line">传递另一个函数的函数名，函数中的this指向这个函数的引用</span><br><span class="line">传递字符串、数值或布尔类型等基础类型，函数中的this指向其对应的包装对象，如 String、Number、Boolean</span><br><span class="line">传递一个对象，函数中的this指向这个对象</span><br><span class="line"></span><br><span class="line">function ()&#123;   </span><br><span class="line">  console.log(this);   </span><br><span class="line">&#125;       </span><br><span class="line">function b()&#123;&#125;       </span><br><span class="line">var c&#x3D;&#123;name:&quot;call&quot;&#125;;    &#x2F;&#x2F;定义对象c  </span><br><span class="line">a.call();   &#x2F;&#x2F;window</span><br><span class="line">a.call(null);   &#x2F;&#x2F;window</span><br><span class="line">a.call(undefined);   &#x2F;&#x2F;window</span><br><span class="line">a.call(1);   &#x2F;&#x2F;Number</span><br><span class="line">a.call(&#39;&#39;);   &#x2F;&#x2F;String</span><br><span class="line">a.call(true);   &#x2F;&#x2F;Boolean</span><br><span class="line">a.call(b);   &#x2F;&#x2F;function b()&#123;&#125;</span><br><span class="line">a.call(c);   &#x2F;&#x2F;Object</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;常用例子 1</span><br><span class="line">function eat(x,y)&#123;   </span><br><span class="line">  console.log(x+y);   </span><br><span class="line">&#125;   </span><br><span class="line">function drink(x,y)&#123;   </span><br><span class="line">  console.log(x-y);   </span><br><span class="line">&#125;   </span><br><span class="line">eat.call(drink,3,2);</span><br><span class="line">&#x2F;&#x2F;输出：5</span><br><span class="line">&#x2F;&#x2F;这个例子中的意思就是用 eat 来替换 drink，eat.call(drink,3,2) &#x3D;&#x3D; eat(3,2) ，所以运行结果为：console.log(5);</span><br><span class="line">&#x2F;&#x2F;注意：js 中的函数其实是对象，函数名是对 Function 对象的引用。</span><br></pre></td></tr></table></figure>
+        <h2 id="markdown的一些简单的语法"><a href="#markdown的一些简单的语法" class="headerlink" title="markdown的一些简单的语法"></a>markdown的一些简单的语法</h2><ol>
+<li><strong>添加表格</strong>：<ul>
+<li>Markdown 制作表格使用 | 来分隔不同的单元格，使用 - 来分隔表头和其他行。</li>
+<li>-: 设置内容和标题栏居右对齐。<br>:- 设置内容和标题栏居左对齐。<br>:-: 设置内容和标题栏居中对齐。<br>语法格式如下:</li>
+</ul>
+</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">| 左对齐 | 右对齐 | 居中对齐 |</span><br><span class="line">| :-----| ----: | :----: |</span><br><span class="line">| 单元格 | 单元格 | 单元格 |</span><br><span class="line">| 单元格 | 单元格 | 单元格 |</span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th align="left">左对齐</th>
+<th align="right">右对齐</th>
+<th align="center">居中对齐</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">单元格</td>
+<td align="right">单元格</td>
+<td align="center">单元格</td>
+</tr>
+<tr>
+<td align="left">单元格</td>
+<td align="right">单元格</td>
+<td align="center">单元格</td>
+</tr>
+</tbody></table>
+<ol start="2">
+<li><p><strong>添加代码片段</strong>：</p>
+<ul>
+<li>使用```符号来包含函数片段<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">function func()&#123;</span><br><span class="line">    ...</span><br><span class="line">    console.log(123)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p><strong>几种字体</strong>：</p>
+<ul>
+<li>使用语法格式如下:<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">*我是斜体*</span><br><span class="line">_我是斜体文本_</span><br><span class="line">**我是粗体文本**</span><br><span class="line">__我是粗体文本__</span><br><span class="line">***我是粗斜体文本***</span><br><span class="line">___我是粗斜体文本___</span><br></pre></td></tr></table></figure></li>
+</ul>
+<p> <em>我是斜体</em><br> <em>我是斜体文本</em><br> <strong>我是粗体文本</strong><br> <strong>我是粗体文本</strong><br> <strong><em>我是粗斜体文本</em></strong><br> <strong><em>我是粗斜体文本</em></strong></p>
+</li>
+<li><p>标题</p>
+<ul>
+<li>一个#表示一级标题，两个#表示二级标题。注:#后面需要一个空格<br>使用格式如下：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">#我是一级标题</span><br><span class="line">##我是二级标题</span><br><span class="line">###我是三级标题</span><br><span class="line">####我是四级标题</span><br><span class="line">#####我是五级标题</span><br><span class="line">######我是六级标题</span><br></pre></td></tr></table></figure>
+<h1 id="我是一级标题"><a href="#我是一级标题" class="headerlink" title="我是一级标题"></a>我是一级标题</h1><h2 id="我是二级标题"><a href="#我是二级标题" class="headerlink" title="我是二级标题"></a>我是二级标题</h2><h3 id="我是三级标题"><a href="#我是三级标题" class="headerlink" title="我是三级标题"></a>我是三级标题</h3><h4 id="我是四级标题"><a href="#我是四级标题" class="headerlink" title="我是四级标题"></a>我是四级标题</h4><h5 id="我是五级标题"><a href="#我是五级标题" class="headerlink" title="我是五级标题"></a>我是五级标题</h5><h6 id="我是六级标题"><a href="#我是六级标题" class="headerlink" title="我是六级标题"></a>我是六级标题</h6></li>
+</ul>
+</li>
+</ol>
+
       
     </div>
     <div class="article-footer">
@@ -319,7 +366,7 @@
     
     <li class="post-copyright-link hidden-xs">
       <strong>本文链接：</strong>
-      <a href="https://jk199548.github.io/2020/05/21/aboutjs/" title="js笔记" target="_blank" rel="external">https://jk199548.github.io/2020/05/21/aboutjs/</a>
+      <a href="https://jk199548.github.io/2020/05/22/markdown/" title="markdown" target="_blank" rel="external">https://jk199548.github.io/2020/05/22/markdown/</a>
     </li>
     
     <li class="post-copyright-license">
@@ -365,10 +412,10 @@
   
   <ul class="pager pull-left">
     
-    <li class="prev">
-      <a href="/2020/05/21/miniprogram/" title="微信小程序"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
-    </li>
     
+    <li class="next">
+      <a href="/2020/05/21/miniprogram/" title="微信小程序"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+    </li>
     
     
   </ul>
@@ -451,7 +498,7 @@ var gitment = new Gitment({
   // id默认为当前页面url，如果url后带参数或锚点，gitment要重新初始化
   // https://github.com/imsun/gitment/issues/55
   // 解决方案：id:window.location.pathname,或者将id设置为当前页面标题
-  id: 'js笔记', 
+  id: 'markdown', 
   owner: 'jk199548', // 可以是你的GitHub用户名，也可以是github id
   repo: '',
   oauth: {
