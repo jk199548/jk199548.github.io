@@ -4,11 +4,11 @@
 
 # Site
 title: '我的博客'
-subtitle: '哈哈'
+subtitle: 
 description: '记录码农生活的点点滴滴'
 keywords:
 author: '蒋楷Jaxon'
-language: cn
+language: zh-CN
 timezone: ''
 
 # URL
@@ -93,7 +93,8 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+##主题
+theme: hexo-theme-pure
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
