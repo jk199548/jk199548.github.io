@@ -5,6 +5,7 @@ date: 2020-09-27 17:30:42
 
 ## 关于vue项目中的一些常见问题
 #### 1、路由传参问题(query和params+动态路由传参)
+
 ```
 1、query的传参
 <router-link :to="{path: 'detail', query: {id: 1}}">前往detail页面</router-link>
