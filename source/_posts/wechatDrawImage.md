@@ -1,16 +1,9 @@
-<!--
- * @Author: your name
- * @Date: 2020-09-27 10:51:55
- * @LastEditTime: 2020-09-27 11:07:55
- * @LastEditors: Please set LastEditors
- * @Description: In User Settings Edit
- * @FilePath: \jk199548.github.io\source\_posts\微信小程序分享缩略图动态绘制.md
--->
 ---
 title: 微信小程序分享缩略图动态绘制
 date: 2020-09-27 10:51:55
-tags:
+tags: wechat
 ---
+
 ## 微信小程序分享缩略图动态绘制
 ### 1、初始化生成主图，根据canvas.createImage()去生成图片对象
 ```
