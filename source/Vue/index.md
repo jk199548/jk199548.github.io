@@ -2,10 +2,8 @@
 title: Vue
 date: 2020-09-27 17:30:42
 ---
-
 ## 关于vue项目中的一些常见问题
 #### 1、路由传参问题(query和params+动态路由传参)
-
 ```
 1、query的传参
 <router-link :to="{path: 'detail', query: {id: 1}}">前往detail页面</router-link>
@@ -19,19 +17,19 @@ date: 2020-09-27 17:30:42
     2)params＋动态路由的url方式：/detail/123
     3)params动态路由传参，一定要在路由中定义参数，然后在路由跳转的时候必须要加上参数，否则就是空白页面：
     {      
-        path: '/detail/:id',      
-        name: 'Detail',      
-        component: Detail    
+      path: '/detail/:id',      
+      name: 'Detail',      
+      component: Detail    
     }
 3、跨域问题
-proxyTable: {
-      // 用‘/api’开头，代理所有请求到目标服务器
-      '/api': {
-        target: 'http://jsonplaceholder.typicode.com', // 接口域名
-        changeOrigin: true, // 是否启用跨域
-        pathRewrite: { //
-          '^/api': ''
-        }
+  proxyTable: {
+    // 用‘/api’开头，代理所有请求到目标服务器
+    '/api': {
+      target: 'http://jsonplaceholder.typicode.com', // 接口域名
+      changeOrigin: true, // 是否启用跨域
+      pathRewrite: { //
+        '^/api': ''
       }
-}
+    }
+  }
 ```
