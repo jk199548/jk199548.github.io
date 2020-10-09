@@ -17,16 +17,16 @@
   <meta http-equiv="window-target" content="_top" />
   
   
-  <title>Vue | 我的博客</title>
-  <meta name="description" content="关于vue项目中的一些常见问题1、路由传参问题(query和params+动态路由传参)1234567891011121314151617181920212223242526271、query的传参&lt;router-link :to&#x3D;&quot;&amp;#123;path: &#39;detail&#39;, query: &amp;#123;id: 1&amp;#125;&amp;#125;&quot;&gt;">
+  <title>vue | 我的博客</title>
+  <meta name="description" content="参考链接 关于vue项目中的一些常见问题1、路由传参问题(query和params+动态路由传参)1234567891011121314151617181920212223242526271、query的传参&lt;router-link :to&#x3D;&quot;&amp;#123;path: &#39;detail&#39;, query: &amp;#123;id: 1&amp;#125;&amp;#125;&amp;quot">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Vue">
+<meta property="og:title" content="vue">
 <meta property="og:url" content="https://jk199548.github.io/vue/index.html">
 <meta property="og:site_name" content="我的博客">
-<meta property="og:description" content="关于vue项目中的一些常见问题1、路由传参问题(query和params+动态路由传参)1234567891011121314151617181920212223242526271、query的传参&lt;router-link :to&#x3D;&quot;&amp;#123;path: &#39;detail&#39;, query: &amp;#123;id: 1&amp;#125;&amp;#125;&quot;&gt;">
+<meta property="og:description" content="参考链接 关于vue项目中的一些常见问题1、路由传参问题(query和params+动态路由传参)1234567891011121314151617181920212223242526271、query的传参&lt;router-link :to&#x3D;&quot;&amp;#123;path: &#39;detail&#39;, query: &amp;#123;id: 1&amp;#125;&amp;#125;&amp;quot">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-09-27T09:30:42.000Z">
-<meta property="article:modified_time" content="2020-09-28T02:36:43.748Z">
+<meta property="article:modified_time" content="2020-10-09T01:52:47.955Z">
 <meta property="article:author" content="蒋楷Jaxon">
 <meta name="twitter:card" content="summary">
   <!-- Canonical links -->
@@ -149,7 +149,7 @@
         
         
         <li class="menu-item menu-item-vue">
-          <a href="/Vue">
+          <a href="/vue">
             
             <i class="icon icon-cup-fill"></i>
             
@@ -319,7 +319,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Vue
+      vue
     </h1>
   
 
@@ -342,7 +342,8 @@
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        <h2 id="关于vue项目中的一些常见问题"><a href="#关于vue项目中的一些常见问题" class="headerlink" title="关于vue项目中的一些常见问题"></a>关于vue项目中的一些常见问题</h2><h4 id="1、路由传参问题-query和params-动态路由传参"><a href="#1、路由传参问题-query和params-动态路由传参" class="headerlink" title="1、路由传参问题(query和params+动态路由传参)"></a>1、路由传参问题(query和params+动态路由传参)</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">1、query的传参</span><br><span class="line">&lt;router-link :to&#x3D;&quot;&#123;path: &#39;detail&#39;, query: &#123;id: 1&#125;&#125;&quot;&gt;前往detail页面&lt;&#x2F;router-link&gt;</span><br><span class="line">    1)query跳转的路径key值为path，</span><br><span class="line">    2)query通过this.$route.query.id来接收参数</span><br><span class="line">    3)query传参的url展现方式：&#x2F;detail?id&#x3D;1&amp;user&#x3D;123&amp;identity&#x3D;1</span><br><span class="line"></span><br><span class="line">2、params+动态路由传参</span><br><span class="line">&lt;router-link :to&#x3D;&quot;&#123;name: &#39;detail&#39;, params: &#123;id: 1&#125;&#125;&quot;&gt;前往detail页面&lt;&#x2F;router-link&gt;</span><br><span class="line">    1)params通过this.$route.params.id来接收参数</span><br><span class="line">    2)params＋动态路由的url方式：&#x2F;detail&#x2F;123</span><br><span class="line">    3)params动态路由传参，一定要在路由中定义参数，然后在路由跳转的时候必须要加上参数，否则就是空白页面：</span><br><span class="line">    &#123;      </span><br><span class="line">      path: &#39;&#x2F;detail&#x2F;:id&#39;,      </span><br><span class="line">      name: &#39;Detail&#39;,      </span><br><span class="line">      component: Detail    </span><br><span class="line">    &#125;</span><br><span class="line">3、跨域问题</span><br><span class="line">  proxyTable: &#123;</span><br><span class="line">    &#x2F;&#x2F; 用‘&#x2F;api’开头，代理所有请求到目标服务器</span><br><span class="line">    &#39;&#x2F;api&#39;: &#123;</span><br><span class="line">      target: &#39;http:&#x2F;&#x2F;jsonplaceholder.typicode.com&#39;, &#x2F;&#x2F; 接口域名</span><br><span class="line">      changeOrigin: true, &#x2F;&#x2F; 是否启用跨域</span><br><span class="line">      pathRewrite: &#123; &#x2F;&#x2F;</span><br><span class="line">        &#39;^&#x2F;api&#39;: &#39;&#39;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+        <p><a href="https://juejin.im/post/6844903632815521799" target="_blank" rel="noopener">参考链接</a></p>
+<h2 id="关于vue项目中的一些常见问题"><a href="#关于vue项目中的一些常见问题" class="headerlink" title="关于vue项目中的一些常见问题"></a>关于vue项目中的一些常见问题</h2><h4 id="1、路由传参问题-query和params-动态路由传参"><a href="#1、路由传参问题-query和params-动态路由传参" class="headerlink" title="1、路由传参问题(query和params+动态路由传参)"></a>1、路由传参问题(query和params+动态路由传参)</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">1、query的传参</span><br><span class="line">&lt;router-link :to&#x3D;&quot;&#123;path: &#39;detail&#39;, query: &#123;id: 1&#125;&#125;&quot;&gt;前往detail页面&lt;&#x2F;router-link&gt;</span><br><span class="line">    1)query跳转的路径key值为path，</span><br><span class="line">    2)query通过this.$route.query.id来接收参数</span><br><span class="line">    3)query传参的url展现方式：&#x2F;detail?id&#x3D;1&amp;user&#x3D;123&amp;identity&#x3D;1</span><br><span class="line"></span><br><span class="line">2、params+动态路由传参</span><br><span class="line">&lt;router-link :to&#x3D;&quot;&#123;name: &#39;detail&#39;, params: &#123;id: 1&#125;&#125;&quot;&gt;前往detail页面&lt;&#x2F;router-link&gt;</span><br><span class="line">    1)params通过this.$route.params.id来接收参数</span><br><span class="line">    2)params＋动态路由的url方式：&#x2F;detail&#x2F;123</span><br><span class="line">    3)params动态路由传参，一定要在路由中定义参数，然后在路由跳转的时候必须要加上参数，否则就是空白页面：</span><br><span class="line">    &#123;      </span><br><span class="line">      path: &#39;&#x2F;detail&#x2F;:id&#39;,      </span><br><span class="line">      name: &#39;Detail&#39;,      </span><br><span class="line">      component: Detail    </span><br><span class="line">    &#125;</span><br><span class="line">3、跨域问题</span><br><span class="line">  proxyTable: &#123;</span><br><span class="line">    &#x2F;&#x2F; 用‘&#x2F;api’开头，代理所有请求到目标服务器</span><br><span class="line">    &#39;&#x2F;api&#39;: &#123;</span><br><span class="line">      target: &#39;http:&#x2F;&#x2F;jsonplaceholder.typicode.com&#39;, &#x2F;&#x2F; 接口域名</span><br><span class="line">      changeOrigin: true, &#x2F;&#x2F; 是否启用跨域</span><br><span class="line">      pathRewrite: &#123; &#x2F;&#x2F;</span><br><span class="line">        &#39;^&#x2F;api&#39;: &#39;&#39;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
       
     </div>
     <div class="article-footer">
@@ -351,7 +352,7 @@
     
     <li class="post-copyright-link hidden-xs">
       <strong>本文链接：</strong>
-      <a href="https://jk199548.github.io/vue/index.html" title="Vue" target="_blank" rel="external">https://jk199548.github.io/vue/index.html</a>
+      <a href="https://jk199548.github.io/vue/index.html" title="vue" target="_blank" rel="external">https://jk199548.github.io/vue/index.html</a>
     </li>
     
     <li class="post-copyright-license">
