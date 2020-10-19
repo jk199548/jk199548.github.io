@@ -1,5 +1,5 @@
 ---
-title: vue
+title: Vue
 date: 2020-09-27 17:30:42
 tags: vue
 ---
