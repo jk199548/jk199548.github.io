@@ -1,6 +1,7 @@
 ---
 title: vue
 date: 2020-09-27 17:30:42
+tags: vue
 ---
 [参考链接](https://juejin.im/post/6844903632815521799)
 ## 关于vue项目中的一些常见问题 
